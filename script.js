@@ -53,6 +53,9 @@ var CONTACT_DOMAIN = "gmail.com";
       });
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0.06 });
     targets.forEach(function (el) {
+      /* Anything already on screen at load stays visible. Only what sits below
+       * the fold gets the reveal, so the first frame is never a blank page. */
+      if (el.getBoundingClientRect().top < window.innerHeight - 40) { return; }
       el.classList.add("reveal");
       io.observe(el);
     });
