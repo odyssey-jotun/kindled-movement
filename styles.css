@@ -142,6 +142,7 @@ em{font-style:italic}
 .promise{max-width:72ch;margin:clamp(34px,4vw,54px) 0 0;font-family:var(--serif);font-size:clamp(1.1rem,1.9vw,1.36rem);line-height:1.45;font-style:italic;color:var(--ink)}
 .promise strong{font-style:normal;font-weight:600;color:var(--ember)}
 .strip{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(14px,2vw,26px);margin-top:clamp(34px,4vw,56px);max-width:820px}
+.strip.strip-3{grid-template-columns:repeat(3,1fr);max-width:none}
 
 /* ---------- cost / shift ---------- */
 .cost-in{grid-template-columns:1fr 1fr;align-items:start}
@@ -206,3 +207,13 @@ em{font-style:italic}
   .nav-links .btn{margin-top:8px}
   .form-inline{grid-template-columns:1fr}
 }
+
+/* ---------- bibliography (Move Together page) ---------- */
+.biblio-sec{background:var(--paper-2)}
+.biblio{list-style:none;margin:0;padding:0;display:grid;gap:clamp(18px,2.4vw,28px);max-width:900px}
+.biblio > li{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(22px,2.6vw,30px);box-shadow:var(--shadow)}
+.bib-cite{font-family:var(--serif);font-size:1.02rem;line-height:1.4;color:var(--ink);margin:0 0 .7em}
+.bib-find{color:var(--ink-soft);font-size:.97rem;margin:0 0 .8em}
+.bib-use{margin:0;font-size:.94rem;color:var(--ink)}
+.bib-use span{display:inline-block;font-family:var(--sans);font-size:.7rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ember);margin-right:.6em}
