@@ -58,6 +58,22 @@ var CONTACT_DOMAIN = "gmail.com";
     });
   }
 
+
+  /* ---- photo slots ----
+   * Each .ph[data-slot="x"] tries assets/x.jpg. If the file is not there the
+   * gradient panel simply stays, so the page never shows a broken image.
+   */
+  document.querySelectorAll(".ph[data-slot]").forEach(function (box) {
+    var slot = box.getAttribute("data-slot");
+    var probe = new Image();
+    probe.onload = function () {
+      probe.alt = box.getAttribute("data-alt") || "";
+      box.appendChild(probe);
+      box.classList.add("has-img");
+    };
+    probe.src = "assets/" + slot + ".jpg";
+  });
+
   /* ---- forms ---- */
   var say = function (form, text, kind) {
     var msg = form.querySelector(".form-msg");
